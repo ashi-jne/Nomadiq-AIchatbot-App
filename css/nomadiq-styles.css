@@ -1,0 +1,294 @@
+/* IMPORT FONTS */
+@font-face {
+    font-family: Poppins;
+    src: url(/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: PoppinsBold;
+    src: url(/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: Dongle;
+    src: url(/fonts/Dongle-Regular.ttf);
+}
+@font-face {
+    font-family: DongleBold;
+    src: url(/fonts/Dongle-Bold.ttf);
+}
+
+/* MATERIAL UI BUTTONS */
+@use "@material/button/styles";
+
+  /* ICONS */
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 96px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  .material-icons-round {
+    font-family: 'Material Icons Round';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 96px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+
+/* Normalizing CSS - removing predefined browser margins */
+body {
+    margin: 0 auto;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    height: 100vh;
+    background-color: #84AC8F;
+}
+
+.logo-large {
+    font-family: "Dongle", Arial, Helvetica, sans-serif;
+    font-size: 10rem;
+    color: white;
+    letter-spacing: .2rem;
+    text-shadow:
+    5px 5px 0 black,
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.login{
+    padding: 30px 10px 10px 10px;
+    font-family: "Dongle", Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+}
+
+.firebaseui-auth-container{
+    padding: 10px 10px 60px 10px;
+    font-size: 1.5rem;
+}
+
+.container {
+    margin-top: 100px; /* Adjust this value according to the height of your navbar */
+    background-color: #84AC8F;
+    height:100vh;
+}
+
+.container-left{
+    flex-shrink: 0;
+    position: relative;
+    left: -20px;
+    border-radius: 6.25rem;
+    border: 1px solid #04591C;
+    background: #fff;
+    box-shadow: 20px 20px 0px 0px #04591C;
+}
+
+.container-right{
+    background-color: #04591C;
+    position: relative;
+    right: -20px;
+    border-radius: .5rem;
+    height: 100v;
+    flex-shrink: 0;
+    backdrop-filter: blur(2px);
+}
+
+.container-search {
+    text-align: center;
+    border-radius: 6.25rem;
+    border: 1px solid black;
+    background: #04591C;
+    box-shadow: 20px 20px 0px 0px black;
+}
+
+.container-text {
+    color: #fff;
+    font-size: 1.25rem; 
+    padding: 100px;
+    text-align: left;
+}
+
+
+/* NAV */
+.sticky{
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbar{
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #84AC8F;
+}
+
+.logo-nav {
+    font-family: "DongleBold", Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    padding: 0 1rem 1rem 1rem;
+    -webkit-text-stroke: .5px white;
+    color: black;
+    text-shadow:
+    3px 3px 0 white,
+    -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+.iframe {
+    width: 85%;
+    height: 80vh;
+    border: none;
+    overflow: auto;
+}
+
+
+/* ************************* */
+/* NOT CURRENTLY USED */
+/* ************************* */
+
+
+.nav-link{
+    color: #000;
+    text-shadow: 6px 6px 0px 0px #EBE9F7;
+    font-family: Dongle;
+    font-size: 2.5rem;
+    font-style:normal;
+    font-weight:bolder;
+    line-height: normal;
+}
+
+.nav-link:hover{
+    color: #04591C;
+    text-decoration: none;
+}
+
+.disabled{
+    color:#525252;
+}
+
+/* .btn-lg{
+    
+    font-weight: 700;
+    border-color: #04591C;
+}
+
+.btn-lg:hover{
+    background-color: #84AC8F;
+    border-color: #04591C;
+    border-width: 2px;
+} */
+
+.push{
+    margin-left: auto;
+    /* margin-right: auto; */
+}
+
+li{
+    padding: 20px;
+}
+
+a{
+    /* color: #F5F5F6; */
+    color:black;
+    text-decoration: none;
+    /* text-decoration: double; */
+    /* text-shadow: 2px 2px 8px #FFFFFF; */
+    
+}
+
+.green{
+    background-color: #84AC8F;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn-about{
+    /* border-radius: 1.25rem;
+    border: 5px solid #04591C; */
+    background-color: white;
+    
+}
+
+.card-title-about{
+    color: #000;
+    text-align:start;
+    /* leading-trim: both;
+    text-edge: cap; */
+    font-family: Dongle;
+    font-size: 3rem;
+    font-style:normal;
+    font-weight:bold;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.left-about{
+    width: 40rem;
+    height: 37.8125rem;
+    flex-shrink: 0;
+    margin-left: -37px;
+    background-color: #D9D9D9;
+
+    border-radius: 1.5625rem;
+    border: 1px solid #04591C;
+    background: #D9D9D9;
+    box-shadow: 20px 20px 0px 0px #04591C;
+        
+}
+
+.right-about{
+    background-color: #04591C;
+    width: 32rem;
+    height: 57.6875rem;
+    flex-shrink: 0;
+    backdrop-filter: blur(2px);
+    /* align-self: right; */
+    margin-right: -37px;
+}
+
+.card-left-text-about1{
+    color: #525252;
+    font-family: Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

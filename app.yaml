@@ -1,0 +1,21 @@
+runtime: python311 # or another supported version
+
+instance_class: F2
+
+entrypoint: gunicorn -b :$PORT -w 2 main:app
+
+env_variables:
+  openai_api: "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"
+  cloud_id: "ElasticChat_GPT:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyQ5YjdhOWI2NzFkY2Y0MDJlOTBjY2UxMjBlOGY0N2YwNyQyM2Q0NTUwZjNhM2M0Y2JjOTk2OTk5NDRlODM3NWQ1Mw=="
+  cloud_pass: "qZv8qTF0tjRynjzutsw0fdAo"
+  cloud_user: "elastic"
+
+handlers:
+# Matches requests to /images/... to files in static/images/...
+- url: /images
+  static_dir: /images
+
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
